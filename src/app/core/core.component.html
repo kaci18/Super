@@ -1,0 +1,86 @@
+<div class="center">
+  <div class="game">
+    <tetris-core
+      #game
+      (lineCleared)="onLineCleared()"
+      (gameOver)="onGameOver()"
+    >
+    </tetris-core>
+  </div>
+
+  <div class="right-panel">
+    <div class="welcome">
+      <h2>Player</h2>
+      <div>{{ playerName }}</div>
+    </div>
+    <div class="score">
+      <h2>Score</h2>
+      <div>{{ score }}</div>
+    </div>
+    <div class="time">
+      <h2>Time</h2>
+      <div>{{ timePlayed }}</div>
+    </div>
+    <div class="status">
+      <h2>Status</h2>
+      <div>{{ status }}</div>
+    </div>
+
+    <div class="statuscontrol">
+      <h2>Status controls</h2>
+      <button
+        *ngIf="status !== 'Paused'; else paused"
+        value="start"
+        (click)="onButtonPressed($event)"
+        [class.disabled]="status === 'Playing'"
+      >
+        Start
+      </button>
+      <ng-template
+        #paused
+        button
+        value="start"
+        (click)="onButtonPressed($event)"
+      >
+        Resume
+      </ng-template>
+      <button
+        value="stop"
+        (click)="onButtonPressed($event)"
+        [class.disabled]="status === 'Paused' || status === 'Ready'"
+      >
+        Pause
+      </button>
+      <button
+        value="reset"
+        (click)="onButtonPressed($event)"
+        [class.disabled]="status === 'Ready'"
+      >
+        Reset
+      </button>
+    </div>
+
+    <div class="gamecontrol">
+      <h2>Game controls</h2>
+      <div class="row">
+        <div class="directions">
+          <div class="rotate">
+            <button value="rotate" (click)="onButtonPressed($event)">
+              Rotate
+            </button>
+          </div>
+          <button type="button" value="left" (click)="onButtonPressed($event)">
+            Left
+          </button>
+          <button value="right" (click)="onButtonPressed($event)">Right</button>
+        </div>
+        <button value="down" (click)="onButtonPressed($event)">Down</button>
+      </div>
+    </div>
+
+    <hr />
+    <button class="intro" value="intro" (click)="onBackClick($event)">
+      Logout & Back to intro
+    </button>
+  </div>
+</div>

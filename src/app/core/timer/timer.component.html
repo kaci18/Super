@@ -1,0 +1,21 @@
+<div class="timer">
+  <div class="center">
+    <div class="info">
+      <h2>Game Over</h2>
+      <p *ngIf="historyData.length !== 0">Game over!</p>
+      <p>You played {{ timePlayed }}s</p>
+      <p>You got {{ score }} points!</p>
+    </div>
+
+    <div class="names">
+      <div>Timestamp</div>
+      <div>Action</div>
+      <div>Playing time</div>
+      <div>Score</div>
+    </div>
+    <div class="table"></div>
+    <div class="bottom-nav">
+      <button type="button" (click)="backToGame()">BACK TO GAME</button>
+    </div>
+  </div>
+</div>
