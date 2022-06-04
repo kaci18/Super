@@ -1,27 +1,5 @@
-<main>
-  <div class="center">
-    <ng-container *ngIf="showPage === 'intro'">
-      <app-menu
-        (loginStatusHandler)="chanegeLoginStatus($event)"
-        (sendLoggedPlayer)="getPlayerData($event)"
-      >
-      </app-menu>
-      <hr />
-      <button
-        class="start-button"
-        value="game"
-        (click)="changePage($event)"
-        [disabled]="!isLogged"
-      >
-        Play
-      </button>
-    </ng-container>
-    <app-core
-      *ngIf="showPage === 'game'"
-      (onPageBack)="changePage($event)"
-      [playerName]="playerName"
-      (loginStatusHandler)="chanegeLoginStatus($event)"
-    >
-    </app-core>
-  </div>
-</main>
+<div class="content" role="main">
+  <router-outlet></router-outlet>
+  <!-- page footer -->
+  <footer><div>Jaroslaw Kacprzyk @ 2022</div></footer>
+</div>

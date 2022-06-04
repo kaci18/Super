@@ -1,0 +1,72 @@
+<!-- here we display the correct game and additional drawing when we lose the game -->
+<div class="container">
+  <tetris-core
+    [ngClass]="[boardStyle]"
+    #game
+    (lineCleared)="onLineCleared()"
+    (gameOver)="onGameOver()"
+  ></tetris-core>
+  <img
+    *ngIf="gameOverInfo == true"
+    id="game-over-info"
+    src="../assets/game-over.png"
+    alt="Game Over"
+  />
+</div>
+<!-- we display here:
+     * a small game logo,
+     * player information
+     * the current number of points
+     * status (stop, start, ready, ...)
+     * control information
+     quit game button
+-->
+<div class="container">
+  <img id="game-logo-image" src="../assets/logo.png" alt="Tetris World Logo" />
+  <h2>
+    Gracz: <span class="white">{{ currentPlayer.name }}</span>
+  </h2>
+  <h2>
+    Punkty: <span class="white">{{ linesCleared }}</span>
+  </h2>
+  <h2>
+    Czas gry: <span class="white">{{ time }} s</span>
+  </h2>
+  <h2>
+    Status: <span [ngClass]="[statusStyle]">{{ status }}</span>
+  </h2>
+  <h2>Sterowanie</h2>
+  <ul class="gamekeys">
+    <li>
+      <span class="gamekey">{{ "\u21B2" }}</span
+      ><span class="gamekey-desc">Zacznij grę / Restart</span>
+    </li>
+    <li>
+      <span class="gamekey">{{ "\u2190" }}</span
+      ><span class="gamekey-desc">W lewo</span>
+    </li>
+    <li>
+      <span class="gamekey">{{ "\u2192" }}</span
+      ><span class="gamekey-desc">W prawo</span>
+    </li>
+    <li>
+      <span class="gamekey">{{ "\u2193" }}</span
+      ><span class="gamekey-desc">W dół</span>
+    </li>
+    <li>
+      <span class="gamekey">{{ "\u2191" }}</span
+      ><span class="gamekey-desc">Obrót</span>
+    </li>
+    <li>
+      <span style="font-size: 30pt" class="gamekey">{{ "\u241B" }}</span
+      ><span class="gamekey-desc">Pauza / Wznów</span>
+    </li>
+  </ul>
+  <button class="btn primary" (click)="gameExit()">EXIT</button>
+</div>
+<!--
+    History Component:  will display historical action tables 
+-->
+<div class="container">
+  <app-history [history]="history"></app-history>
+</div>

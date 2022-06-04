@@ -1,0 +1,72 @@
+<!--
+ VIEW OF THE LOGIN PAGE COMPONENT
+-->
+<!-- logo and title -->
+<img id="logo-image" src="../assets/logo.png" alt="Tetris World Logo" />
+<h2 id="welcome">
+  Witaj w Tetris World <span>{{ player.name }}</span>
+</h2>
+<!--
+  login form
+   * after confirmation, the start (...) function is called
+-->
+<div id="login-form">
+  <form [formGroup]="introForm" (submit)="start()">
+    <div class="login-form-row">
+      <input
+        type="text"
+        placeholder="Wpisz swoje imię..."
+        formControlName="name"
+        name="name"
+      />
+    </div>
+    <div class="login-form-row">
+      <input
+        type="text"
+        placeholder="Wpisz swój email..."
+        formControlName="email"
+        name="email"
+      />
+    </div>
+    <div class="login-form-row" id="contrast_row">
+      <label for="contrast">Kontrastowe kolory</label>
+      <input
+        type="checkbox"
+        formControlName="contrast"
+        name="contrast"
+        id="contrast"
+      />
+    </div>
+    <div class="login-form-row">
+      <button class="btn secondary" [disabled]="introForm.invalid">GO !</button>
+    </div>
+  </form>
+  <div class="login-form-row">
+    <div *ngIf="introForm.controls['name'].touched" class="error">
+      <p *ngIf="introForm.controls['name'].errors?.['required']">
+        Imię jest wymagane.
+      </p>
+      <p *ngIf="introForm.controls['name'].errors?.['minlength']">
+        Imię musi mieć co najmniej 4 znaki.
+      </p>
+    </div>
+    <div *ngIf="introForm.controls['email'].touched" class="error">
+      <p *ngIf="introForm.controls['email'].errors?.['required']">
+        Adres e-mail jest wymagany.
+      </p>
+      <p *ngIf="introForm.controls['email'].errors?.['pattern']">
+        To nie jest poprawny adres e-mail.
+      </p>
+    </div>
+  </div>
+</div>
+<div id="sample_colors" class="{{ color }}">
+  <div class="odd"></div>
+  <div class="even"></div>
+  <br />
+  <div class="even"></div>
+  <div class="odd"></div>
+</div>
+<div id="highscores">
+  <a id="highscores_link" title="Highscores" href="/highscores">High Scores</a>
+</div>

@@ -1,1 +1,118 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: #000;
+    color: #fff;
+    /*  background-image: url('./assets/bg.jpg'); */
+}
+
+h2 {
+    color: #0f0;
+}
+
+p, div, span {
+    color: #fff;
+}
+
+tetris-core tile {
+    background: #232323;
+
+}
+tetris-core board {
+    background: #000000;
+}
+tetris-core tile.color-box {
+    background: #000000;
+}
+
+tetris-core.game-over tile {
+	background: #881400;
+}
+
+/* STYLE WZIĘTE ZE STRONY: https://codepen.io/Brandon-Stoyles/pen/RajYmd */
+
+button.btn {
+	background: #7C7C7C;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.2rem;
+	margin: 1rem;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: 80%;
+	
+	
+}
+
+button.btn:focus,
+button.btn:hover {
+    background: #BCBCBC;
+}
+
+button.btn.primary {
+	background: #881400;
+}
+	
+button.btn.primary:focus,
+button.btn.primary:hover {
+    background: #A81000;
+}
+
+button.btn.primary:disabled,
+button.btn.secondary:disabled {
+	background: #7C7C7C;
+    cursor: default;
+}
+
+button.btn.secondary {
+	background: #005800;
+}
+	
+button.btn.secondary:focus,
+button.btn.secondary:hover {
+	background: #006800;
+}
+
+
+button.btn.tertiary {
+	background: #0000BC;
+}
+	
+button.btn.tertiary:focus,
+button.btn.tertiary:hover {
+	background: #0000FC;
+}
+
+tetris-core.contrast tile {
+		background: white;
+}
+tetris-core.contrast tile.color-box {
+	background: #000000;
+}
+tetris-core.contrast tile.color-dot {
+	background: #000000;
+}
+tetris-core.contrast tile.color-line {
+	background: #000000;
+}
+tetris-core.contrast tile.color-t {
+	background: #000000;
+}
+tetris-core.contrast tile.color-l {
+	background: #000000;
+}
+tetris-core.contrast tile.color-lr {
+	background: #000000;
+}
+tetris-core.contrast tile.color-z {
+	background: #000000;
+}
+tetris-core.contrast tile.color-s {
+	background: #000000;
+}

@@ -1,0 +1,39 @@
+table#gameplay-table {
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+table#gameplay-table tr {
+    border-top: 1px solid #fff;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+table#gameplay-table thead tr th {
+    color: green;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    padding: 8px 0px;
+}
+table#gameplay-table thead tr th,
+table#gameplay-table tr td {
+    padding: 5px 0px;
+}
+input#term {
+    border: 1px solid #fff;
+    background: none;
+    padding: 7px 5px;
+    color: #fff;
+    margin-bottom: 20px;
+    width: 75%;
+}
+a#sort-button {
+    color: #00FF00;
+    text-decoration: none;
+    font-size: 10px;
+}
+a#sort-button:hover,
+a#sort-button:visited,
+a#sort-button:active {
+    color: green;
+}

@@ -1,29 +1,41 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserModule } from '@angular/platform-browser';	
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TetrisCoreModule } from 'ngx-tetris';
-import { MenuComponent } from './menu/menu.component';
-import { FormsModule } from '@angular/forms';
-import { CoreComponent } from './core/core.component';
-import { TimerComponent } from './core/timer/timer.component';
+import { IntroComponent } from './intro/intro.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GameComponent } from './game/game.component';
+import { HistoryComponent } from './history/history.component';
+import { FilterPipe, SortByPipe, SortScoresPipe } from '../app/pipes.pipe';
+import { RouterModule } from '@angular/router';
+import { HighscoresComponent } from './highscores/highscores.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    CoreComponent,
-    TimerComponent,
-    
+    IntroComponent,
+    GameComponent,
+    HistoryComponent,
+    FilterPipe,
+    SortByPipe,
+    SortScoresPipe,
+    HighscoresComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    TetrisCoreModule,
     FormsModule,
-    TetrisCoreModule
-  
-
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      { path: 'game/:color', component: GameComponent },
+      { path: 'intro', component: IntroComponent },
+      { path: 'highscores', component: HighscoresComponent },
+      { path: '**', redirectTo: 'intro' },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

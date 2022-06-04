@@ -1,0 +1,91 @@
+#login-form {
+    display:block;
+    margin: 20px auto;
+    padding:30px;
+    background-color: #000;
+    height: 300px;
+}
+#login-form div {
+    display: block;
+    text-align: center;
+    clear: both;
+}
+h2#welcome {
+    text-align: center;
+}
+h2#welcome span {
+    color: #fff;
+}
+#login-form input {
+    border: 1px solid #fff;
+    background: none;
+    padding: 10px 6px;
+    color: #fff;
+    margin-bottom: 20px;
+    width: 80%;
+}
+#login-form div.error p {
+    width: 80%;
+    padding:5px;
+    border: 1px solid #881400;
+    font-size: 10pt;
+    margin: 0 auto;
+    padding: 3px;
+    margin-bottom: 3px;
+}
+#sample_colors {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 3px solid #fff;
+}
+#sample_colors div {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+#sample_colors.default div.odd {
+    background: green
+}
+#sample_colors.default div.even {
+    background: red;
+}
+#sample_colors.contrast div.odd {
+    background: black;
+}
+#sample_colors.contrast div.even {
+    background: white
+}
+#sample_colors.contrast {
+    border: 3px solid blue;
+}
+div#highscores {
+    text-align: center;
+    padding: 20px;
+}
+a#highscores_link,
+a#highscores_link:visited {
+    color: #00FF00;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+a#highscores_link:hover,
+a#highscores_link:active {
+    color: green;
+}
+div.login-form-row#contrast_row {
+    text-align: left;
+}
+div.login-form-row#contrast_row label {
+    margin-left: 5px;
+}
+div.login-form-row#contrast_row input#contrast {
+    width: auto;
+    float: left;
+    margin-left: 25px;
+}

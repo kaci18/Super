@@ -1,0 +1,58 @@
+:host {
+    display: block;
+    width: 1280px;
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+span.white {
+    color: #fff;
+}
+span.red {
+    color: #f00;
+}
+div.container {
+    float: left;
+    display: block;
+    width: 30%;
+    height: 600px;
+    text-align: left;
+}
+img#game-logo-image {
+    width: 150px;
+}
+ul.gamekeys {
+    list-style-type: none;
+    line-height: 30px;
+    padding-left: 0px;
+}
+ul.gamekeys li {
+    text-align: left;
+    padding: 5px;
+}
+ul.gamekeys li span.gamekey {
+    border: 1px solid #B3B3B3;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    width: 36px;
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+}
+img#game-over-info {
+    display: inline-block;
+    clear: both;
+    width: 150px;
+    margin: 10px 0px 0px 66px;
+}
+
+
+
+
+
+
+
+
+
+

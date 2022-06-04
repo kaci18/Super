@@ -1,0 +1,56 @@
+a#sort-button {
+    color: #00FF00;
+    text-decoration: none;
+    font-size: 10px;
+}
+a#sort-button:hover,
+a#sort-button:visited,
+a#sort-button:active {
+    color: green;
+}
+h2 {
+    text-align: center;
+}
+table#highscores-table {
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+table#highscores-table tr {
+    border-top: 1px solid #fff;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+table#highscores-table thead tr th {
+    color: green;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    padding: 8px 0px;
+}
+table#highscores-table thead tr th,
+table#highscores-table tr td {
+    padding: 5px 0px;
+}
+div#goback {
+    display: block;
+    margin:20px auto;
+    text-align: center;
+}
+a#goback-link,
+a#goback-link:visited {
+    color: red;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+a#goback-link:hover,
+a#goback-link:active {
+    color: #CC0000;
+}
+
+
+
+
+
+
