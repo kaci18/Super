@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background: #000;
+    background: rgb(25, 53, 3);
     color: #fff;
     /*  background-image: url('./assets/bg.jpg'); */
 }
@@ -14,11 +14,11 @@ p, div, span {
 }
 
 tetris-core tile {
-    background: #232323;
+    background: rgb(198, 39, 39);
 
 }
 tetris-core board {
-    background: #000000;
+    background: rgb(215, 226, 60);
 }
 tetris-core tile.color-box {
     background: #000000;

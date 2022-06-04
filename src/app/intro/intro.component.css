@@ -2,7 +2,7 @@
     display:block;
     margin: 20px auto;
     padding:30px;
-    background-color: #000;
+    background-color: rgb(17, 198, 243);
     height: 300px;
 }
 #login-form div {
